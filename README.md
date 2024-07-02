@@ -8,6 +8,11 @@ A monorepo using pnpm and turborepo.
 - `pnpm run build` - Build the projects.
 
 ## Getting Started
+1. Install node version.
+    ```
+    nvm install
+    nvm use
+    ```
 1. Install pnpm.
     ```
     curl -fsSL https://get.pnpm.io/install.sh | sh -
