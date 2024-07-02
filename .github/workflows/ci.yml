@@ -16,16 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 9.4.0
-          run_install: false
+      - name: Setup Tools
+        uses: ./.github/workflows/tools.yml
 
       - name: Get pnpm store directory
         shell: bash
@@ -50,6 +42,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup Tools
+        uses: ./.github/workflows/tools.yml
+        
       - name: Build and Test
         run: pnpm turbo build test
 
