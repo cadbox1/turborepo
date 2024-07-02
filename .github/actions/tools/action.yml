@@ -1,0 +1,17 @@
+name: "Setup Tools"
+runs: 
+  using: "composite"
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+        
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
+      with:
+        version: 9.4.0
+        run_install: false
