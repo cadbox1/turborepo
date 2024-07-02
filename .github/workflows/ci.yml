@@ -42,8 +42,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
       - name: Setup Tools
-        uses: ./.github/workflows/tools.yml
+        uses: ./.github/actions/tools
 
       - name: Build and Test
         run: pnpm turbo build test
