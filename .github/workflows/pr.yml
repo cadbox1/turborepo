@@ -1,6 +1,5 @@
+name: PR
 on:
-  push:
-    branches: ["main"]
   pull_request:
     types: [opened, synchronize]
 
@@ -15,12 +14,12 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 9
           run_install: false
 
       - name: Get pnpm store directory
@@ -38,3 +37,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Build and Test
+        run: pnpm turbo build test
