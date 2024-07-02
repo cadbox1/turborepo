@@ -17,8 +17,8 @@
     "turbo-ignore": "^2.0.3",
     "typescript": "^5.3.3"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
