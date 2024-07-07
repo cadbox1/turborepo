@@ -3,6 +3,6 @@ import { hello } from "./hello";
 
 describe("hello", () => {
   test("hello output is correct", () => {
-    expect(hello()).toBe("hello 2 + 2 = 4");
+    expect(hello()).toBe("hello 2 + 2 = 4, I have updated the message");
   });
 });
